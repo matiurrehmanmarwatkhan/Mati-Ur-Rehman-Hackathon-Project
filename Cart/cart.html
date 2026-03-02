@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="cart.js" async></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header
+      class="w-full h-16 flex items-center justify-evenly bg-gray-600 text-white px-4"
+    >
+      <div class="logo text-2xl font-bold">
+        <h3>My Hackathon Project</h3>
+      </div>
+      <div class="nav flex space-x-9">
+        <a href="" class="decoration-none text-white text-[18px]">Home</a>
+        <a href="" class="decoration-none text-white text-[18px]">About</a>
+        <a href="" class="decoration-none text-white text-[18px]">Out Story</a>
+        <a href="" class="decoration-none text-white text-[18px]">Blog</a>
+        <a href="" class="decoration-none text-white text-[18px]">Contact Us</a>
+      </div>
+      <div class="socailicon flex space-x-9 align-center">
+        <div
+          class="cart pt-1 text-2xl relative cursor-pointer"
+          onclick="cartitem()"
+        >
+          🛒
+          <span
+            id="cartCount"
+            class="py-1 px-2 bg-red-400 absolute top-[-10px] right-[-10px] rounded-full text-[16px] text-white"
+            >0</span
+          >
+        </div>
+        <div class="whist pt-1 text-2xl">❤️</div>
+        <button
+          class="bg-blue-400 text-white px-4 py-2 rounded-md cursor-pointer hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+        >
+          <a
+            href="Form/login-form.html"
+            target="_blank"
+            class="text-white px-3 block"
+            >Login</a
+          >
+        </button>
+      </div>
+    </header>
+    <!-- Cart Container -->
+    <div
+      id="cartContainer"
+      class="max-w-4xl mx-auto mt-8 bg-white p-6 rounded-xl shadow-lg"
+    ></div>
+  </body>
+</html>
