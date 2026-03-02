@@ -1,4 +1,4 @@
-// ==================== DATA ====================
+//  DATA
 const products = [
   {
     id: 1,
@@ -165,12 +165,12 @@ const blogPosts = [
   },
 ];
 
-// ==================== STATE ====================
+//  STATE
 let cart = [];
 let isLoggedIn = false;
 let currentUser = null;
 
-// ==================== INITIALIZE ====================
+//  INITIALIZE
 document.addEventListener("DOMContentLoaded", function () {
   // Check login status
   checkLoginStatus();
@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function () {
   showPage("home");
 });
 
-// ==================== LOGIN FUNCTIONS ====================
+//  LOGIN FUNCTIONS
 function checkLoginStatus() {
   const savedUser = localStorage.getItem("user");
   if (savedUser) {
@@ -218,7 +218,7 @@ function updateUIForLogout() {
   document.getElementById("userEmailDisplay").classList.add("hidden");
 }
 
-// ==================== PAGE NAVIGATION ====================
+//  PAGE NAVIGATION
 function showPage(page) {
   // Hide all pages
   document.getElementById("homePage").classList.add("hidden");
@@ -239,7 +239,7 @@ function showPage(page) {
   });
 }
 
-// ==================== SLIDER ====================
+//  SLIDER
 function initializeSlider() {
   const slides = document.querySelectorAll(".slide");
   let currentSlide = 0;
@@ -253,7 +253,7 @@ function initializeSlider() {
   }, 3000);
 }
 
-// ==================== PRODUCTS ====================
+//  PRODUCTS
 function displayProducts() {
   const container = document.getElementById("productContainer");
   if (!container) return;
@@ -289,7 +289,7 @@ function displayProducts() {
   });
 }
 
-// ==================== BLOG ====================
+//  BLOG
 function displayBlogPosts(category = "all") {
   const container = document.getElementById("blogContainer");
   if (!container) return;
@@ -327,7 +327,7 @@ function displayBlogPosts(category = "all") {
   });
 }
 
-// ==================== CART FUNCTIONS ====================
+//  CART FUNCTIONS
 function addToCart(productId) {
   if (!isLoggedIn) {
     showNotification("Please login first!", "error");
@@ -389,7 +389,7 @@ function updateCart() {
   }
 }
 
-// ==================== NOTIFICATIONS ====================
+//  NOTIFICATIONS
 function showNotification(message, type) {
   const notification = document.createElement("div");
   notification.className = `fixed top-20 right-4 px-6 py-3 rounded-lg shadow-lg z-50 transform transition-all duration-500 ${
@@ -405,7 +405,7 @@ function showNotification(message, type) {
   }, 3000);
 }
 
-// ==================== MODAL FUNCTIONS ====================
+//  MODAL FUNCTIONS
 function openLoginModal() {
   document.getElementById("loginModal").classList.remove("hidden");
   document.getElementById("loginModal").classList.add("flex");
@@ -416,7 +416,7 @@ function closeLoginModal() {
   document.getElementById("loginModal").classList.remove("flex");
 }
 
-// ==================== EVENT LISTENERS ====================
+//  EVENT LISTENERS
 function initializeEventListeners() {
   // Page navigation
   document.querySelectorAll("[data-page]").forEach((link) => {
