@@ -416,7 +416,7 @@ function closeLoginModal() {
   document.getElementById("loginModal").classList.remove("flex");
 }
 
-//  EVENT LISTENERS
+//  Event Listener
 function initializeEventListeners() {
   // Page navigation
   document.querySelectorAll("[data-page]").forEach((link) => {
